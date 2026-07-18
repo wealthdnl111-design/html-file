@@ -78,21 +78,12 @@ body{
 }
 
 .SubmitBtn button{
-    width: 50%;
+    width: 100%;
     border-radius: 50px;
     padding: 3%;
-}
-
-.ResetBtn button{
-    width: 50%;
-    border-radius: 50px;
-    padding: 3%;
+    background-color: white;
 }
 
 .SubmitBtn :hover{
-    background-color: rgb(212, 212, 212);
-}
-
-.ResetBtn :hover{
     background-color: rgb(212, 212, 212);
 }
