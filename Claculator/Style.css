@@ -1,0 +1,104 @@
+*{
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #1e1e1e;
+  color: #fff;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+}
+
+.calculator {
+  border: solid 2px #000;
+  padding: 15px;
+  background-color: #898989;
+  border-radius: 12px;
+  display: inline-block;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.display {
+  width: 100%;
+  height: 50px;
+  margin-bottom: 15px;
+  padding: 10px;
+  font-size: 24px;
+  text-align: right;
+  border: none;
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: #000;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 8px;
+}
+
+.calculator button {
+  width: 60px;
+  height: 60px;
+  font-size: 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: #f0f0f0;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.calculator button:hover {
+  background-color: #e2e2e2;
+}
+
+.calculator button:active {
+  transform: scale(0.95);
+}
+
+/* Style operators (+, -, *, /) differently */
+.calculator button[data-value="+"],
+.calculator button[data-value="-"],
+.calculator button[data-value="*"],
+.calculator button[data-value="/"] {
+  background-color: #ff9500;
+  color: #fff;
+}
+
+.calculator button[data-value="+"]:hover,
+.calculator button[data-value="-"]:hover,
+.calculator button[data-value="*"]:hover,
+.calculator button[data-value="/"]:hover {
+  background-color: #e08400;
+}
+
+/* Style the equals and clear buttons differently */
+.calculator button[data-value="="] {
+  background-color: #4CAF50;
+  color: #fff;
+}
+
+.calculator button[data-value="="]:hover {
+  background-color: #45a049;
+}
+
+.calculator button[data-value="C"] {
+  background-color: #d9534f;
+  color: #fff;
+}
+
+.calculator button[data-value="C"]:hover {
+  background-color: #c9302c;
+}
