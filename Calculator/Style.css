@@ -16,7 +16,7 @@ body {
 
 h1 {
   margin-bottom: 20px;
-  font-size: 2.5rem;
+  font-size: 50px;
 }
 
 .calculator {
@@ -44,7 +44,7 @@ h1 {
 .buttons {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(5, 1fr);
+  grid-template-rows: repeat(3, 1fr);
   gap: 8px;
 }
 
@@ -68,37 +68,37 @@ h1 {
   transform: scale(0.95);
 }
 
-/* Style operators (+, -, *, /) differently */
-.calculator button[data-value="+"],
-.calculator button[data-value="-"],
-.calculator button[data-value="*"],
-.calculator button[data-value="/"] {
+
+.calculator button[value="+"],
+.calculator button[value="-"],
+.calculator button[value="*"],
+.calculator button[value="/"] {
   background-color: #ff9500;
   color: #fff;
 }
 
-.calculator button[data-value="+"]:hover,
-.calculator button[data-value="-"]:hover,
-.calculator button[data-value="*"]:hover,
-.calculator button[data-value="/"]:hover {
+.calculator button[value="+"]:hover,
+.calculator button[value="-"]:hover,
+.calculator button[value="*"]:hover,
+.calculator button[value="/"]:hover {
   background-color: #e08400;
 }
 
 /* Style the equals and clear buttons differently */
-.calculator button[data-value="="] {
+.calculator button[value="="] {
   background-color: #4CAF50;
   color: #fff;
 }
 
-.calculator button[data-value="="]:hover {
+.calculator button[value="="]:hover {
   background-color: #45a049;
 }
 
-.calculator button[data-value="C"] {
+.calculator button[value="C"] {
   background-color: #d9534f;
   color: #fff;
 }
 
-.calculator button[data-value="C"]:hover {
+.calculator button[value="C"]:hover {
   background-color: #c9302c;
 }
